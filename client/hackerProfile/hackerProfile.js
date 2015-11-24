@@ -6,7 +6,7 @@ Template.hackerProfile.events( {
       hacker.userName = $("input#user-name").val() || "";
       hacker.userHack = $("input#user-hack").val() || "";
     
-      if( hacker.userEmail.length() === 0 ) return;
+      if( hacker.userEmail.length === 0 ) return;
       
       Hackers.update(
       	{email: hacker.userEmail}, 
