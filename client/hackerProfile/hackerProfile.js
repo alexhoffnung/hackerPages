@@ -1,4 +1,4 @@
-Template.hackerProfile.events {
+Template.hackerProfile.events( {
 	"click .btn": function () {
       let hacker = {};
       hacker.peopleName = $("input#people-name").val() || "";
@@ -20,4 +20,4 @@ Template.hackerProfile.events {
       	{ upsert: true }
       );
     }
-}
+});
