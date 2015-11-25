@@ -8,16 +8,8 @@ Template.hackerProfile.events( {
     
       if( hacker.userEmail.length === 0 ) return;
       
-      Hackers.update(
-      	{email: hacker.userEmail}, 
-      	{$set: 
- 			{
- 				peopleName: hacker.peopleName,
- 				userName: hacker.userName,
- 				userHack: hacker.userHack
- 			}
-      	},
-      	{ upsert: true }
+      Hackers.insert(
+      	hacker
       );
     }
 });
